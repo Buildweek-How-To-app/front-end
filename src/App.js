@@ -1,17 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route } from 'react-router-dom';
+import TopicContainer from './components/TopicContainer'
+import TopicPage from './components/TopicPage'
 import dummyData from './dummy-data';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>{dummyData[0].title}</h1>
-        <p>
-        {dummyData[0].content}
-        </p>
+        <Route exact path='/' render={() => <TopicContainer />} />
+        <Route path='/topics/:id'>
+          <TopicPage items={dummyData}/>
+        </Route>
       </header>
     </div>
+
   );
 }
 
