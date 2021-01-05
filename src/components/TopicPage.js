@@ -1,21 +1,31 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import dummyData from '../dummy-data'
+import React from 'react';
+import { Route, Link, useParams } from 'react-router-dom';
+import { Button } from 'reactstrap';
 
 
-const TopicPage = () => {
-	const [topic, setTopic] = useState();
+const TopicPage = (props) => {
 	const params = useParams();
-	let id = params.id;
-
-	useEffect(() => {
-		setTopic(dummyData.find(x => x.id === id)); console.log(topic)
-	}, [id]);
+	const topicItem = props.items.find(item => item.id === Number(params.id));
 
 	return (
 		<div>
-			<h1>{topic.title}</h1>
-			<h1>{topic.content}</h1>
+			<Route exact path={`/topics/${topicItem.id}/edit`} /* render={edit component here passing in topicItem} */ />
+			
+			<Link to="/">
+				<Button color='primary'>Home</Button>
+			</Link>
+
+			<h1>{topicItem.title}</h1>
+
+			<p>{topicItem.content}</p>
+
+			<Link to={`/topics/${topicItem.id}/edit`}>
+				<Button color='warning'>Edit</Button>
+			</Link>
+
+			<Link to="/">
+				<Button color='danger'>Delete</Button>
+			</Link>
 		</div>
 	);
 };
