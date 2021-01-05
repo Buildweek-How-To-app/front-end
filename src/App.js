@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Route exact path='/' render={() => <TopicContainer />} />
-        <Route path='/topics/:id'>
+        <Route exact path='/topics/:id'>
           <TopicPage items={dummyData}/>
         </Route>
       </header>
