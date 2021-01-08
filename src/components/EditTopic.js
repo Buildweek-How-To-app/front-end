@@ -1,5 +1,5 @@
 import React, { useState,  } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button } from 'reactstrap';
 import axios from 'axios'
 import './EditTopic.css'
 
@@ -16,7 +16,7 @@ const EditTopic = (props) => {
 	const formSubmit = (e) => {
 		e.preventDefault();
 
-		axios.post("https://reqres.in/api/users", topicContent)
+		axios.put("https://reqres.in/api/users", topicContent)
 			.then((res) => {
 				setPostResponse("Submit Successful!");
 			})
