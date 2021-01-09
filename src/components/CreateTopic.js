@@ -29,7 +29,7 @@ const CreateTopic = (props) => {
 	return (
 		<>
 			<Link to="/">
-					<Button color='primary'>Home</Button>
+				<Button color='primary' size="lg">Home</Button>
 			</Link>
 			
 			<form onSubmit={formSubmit}>
@@ -42,7 +42,7 @@ const CreateTopic = (props) => {
 					<textarea type="text" name="content" id="content" value={topicContent.content} onChange={change}/>
 				</label>
 
-				<Button color="success">Save</Button>
+				<Button color="success" size="lg">Save</Button>
 				<pre>{JSON.stringify(postResponse, null, 2)}</pre>
 
 			</form>

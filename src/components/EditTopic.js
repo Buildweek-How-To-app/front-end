@@ -33,7 +33,7 @@ const EditTopic = (props) => {
 				<textarea type="text" name="content" id="content" value={topicContent.content} onChange={change}/>
 			</label>
 
-			<Button color="success">Save</Button>
+			<Button color="success" size="lg">Save</Button>
 			<pre>{JSON.stringify(postResponse, null, 2)}</pre>
 
 		</form>
