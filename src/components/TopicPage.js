@@ -14,7 +14,7 @@ const TopicPage = (props) => {
 		<div>
 			
 			<Link to="/">
-				<Button color='primary'>Home</Button>
+				<Button color='primary' size="lg">Home</Button>
 			</Link>
 
 			<div className="Topic-Content">
@@ -23,11 +23,11 @@ const TopicPage = (props) => {
 			</div>
 
 			<Link to={`${routeMatch.url}/edit`}>
-				<Button color='warning'>Edit</Button>
+				<Button color='warning' size="lg">Edit</Button>
 			</Link>
 
 			<Link to="/">
-				<Button color='danger'>Delete</Button>
+				<Button color='danger' size="lg">Delete</Button>
 			</Link>
 
 			<Route exact path={`${routeMatch.path}/edit`} render={() => <EditTopic item={topicItem} />} />
