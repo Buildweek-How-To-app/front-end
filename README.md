@@ -1,5 +1,5 @@
 # Project info
-#### Front end deployed to [Netlify](https://peaceful-williams-eee54a.netlify.app/)
+#### Front end deployed to [Netlify](https://5ffa4a5cd9ccad0007ae63f9--flamboyant-goldstine-a80fc5.netlify.app/)
 
 ## Key Features
 
