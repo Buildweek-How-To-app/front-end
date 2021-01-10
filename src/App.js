@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
-import TopicContainer from './components/TopicContainer';
 import TopicPage from './components/TopicPage';
 import CreateTopic from './components/CreateTopic';
 import SearchBox from './components/Searchbox'

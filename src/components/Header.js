@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import Styled from "styled-components";
 
 const Head = Styled.h1`

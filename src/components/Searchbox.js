@@ -17,16 +17,16 @@ export default function SearchBox(){
      searchtext: yup.string().required("Cannot search empty")
  });
 
- useEffect(()=>{
+ useEffect(() => {
      formSchema.isValid(formState).then((valid)=>{
          console.log("Is the form Valid?", valid);
          setButtonDisabled(!valid);
      });
- },[formState]);
+ },[formSchema, formState]);
 
 const validate =(event) =>{
     yup
-    .reach (formSchema, event.target.name)
+    .reach(formSchema, event.target.name)
     .validate(event.target.value)
     .then((validate)=>{
         setErrors({...errors, [event.target.name]:""})
